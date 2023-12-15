@@ -3,12 +3,14 @@ class UniversalSteps:
     space_status = "x"
 
     def clean_up_step(self):
-        print(UniversalSteps.space_id + "BEFORE CHANGE")
+        print("BEFORE CHANGE")
+        print(UniversalSteps.space_id)
 
         if UniversalSteps.space_status == "x":
             UniversalSteps.space_id = "changed id"
 
-            print(UniversalSteps.space_id + "AFTER CHANGE")
+            print("AFTER CHANGE")
+            print(UniversalSteps.space_id)
 
 
 
