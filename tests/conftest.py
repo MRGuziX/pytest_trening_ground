@@ -1,7 +1,13 @@
 import pytest
 
+from data_storage.data_storage import DataStorage
 from tests.feature_steps_lib.feature_steps import FeatureSteps
 from tests.universal_steps_lib.universal_steps import UniversalSteps
+
+
+@pytest.fixture(scope="session", name="module_name_data_storage")
+def fixture_module_name_data_storage():
+    return DataStorage()
 
 
 @pytest.fixture(scope="session", name="universal_step")
