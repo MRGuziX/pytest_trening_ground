@@ -1,21 +1,13 @@
-from data_storage.data_storage import DataStorage
-
-
 class UniversalSteps:
+    def __init__(self, data_storage):
+        self.data_storage = data_storage
 
-    def clean_up_step(self):
-        print("BEFORE CHANGE")
-        print(DataStorage.space_id)
+    def change_b(self):
 
-        if DataStorage.space_status == "x":
-            DataStorage.space_id = "changed id"
+        if self.data_storage.variable_a == 2:
+            print("\nVariable A from Object created at FeatureSteps\n")
+            print(self.data_storage.variable_a)
 
-            print("AFTER CHANGE")
-            print(DataStorage.space_id)
-
-    def create_obj_step(self):
-        model = UniversalSteps()
-        model.foo = "bar"
-
-
-
+        else:
+            print("\nVariable A created from Universal Steps\n")
+            print(self.data_storage.variable_a)

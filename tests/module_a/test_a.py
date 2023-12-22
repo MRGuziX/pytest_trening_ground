@@ -1,10 +1,13 @@
-class TestFeatureName:
+def test_a(universal_step, feature_step, data_storage):
+    print("\n Variable A from Datastorage")
+    print(data_storage.variable_a)
+    assert data_storage.variable_a == 1
 
-    def test_prompt_tuning(self, universal_step, feature_step, module_name_data_storage):
-        universal_step.clean_up_step()
-        feature_step.use_changed_id()
+    feature_step.change_a()
 
-        universal_step.create_obj_step()
-        feature_step.get_into_created_model_step()
+    universal_step.change_b()
 
-        # module_name_data_storage.prompt_tuned = "FooBar"
+
+def test_b(self, universal_step, feature_step, data_storage):
+    print("\n Variable A from Datastorage SCOPE FUNCTION")
+    print(data_storage.variable_a)
